@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <title>Animating Shapes</title>
+
+    <!--  --------- IMPORTED LIBRARIES  ------>
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+      <!-- Creating scene -->
+
+      <!--  --------- SKY  --------- -->
+
+      <a-sky color="#EBEBEB"></a-sky>
+
+      <!--  --------- GROUND  --------- -->
+
+      <a-plane
+        id="ground"
+        color="brown"
+        position="0 0 0"
+        rotation="-90 0 0"
+        width="20"
+        height="10"
+      ></a-plane>
+
+      <!-- Head -->
+      <a-sphere
+        id="head"
+        color="#0276aa"
+        position="0 8 0"
+        radius="2"
+      >
+      </a-sphere>
+
+      <!-- Eyes -->
+
+      <a-sphere
+        color="#fff"
+        position="-0.6 8.4 1.7"
+        radius="0.6"
+      >
+      </a-sphere>
+
+      <a-sphere
+        color="#000"
+        radius="0.15"
+        position="-0.6 8.4 2.5"></a-sphere>
+
+      <a-sphere
+        color="#fff"
+        position="0.6 8.4 1.7"
+        radius="0.6"
+      >
+      </a-sphere>
+      <a-sphere
+        color="#000"
+        radius="0.15"
+        position="0.6 8.4 2.5"></a-sphere>
+
+        <a-sphere
+        color="#FF0000"
+        radius="0.25"
+        position="0 7.6 3"></a-sphere>
+
+        <a-sphere
+        color="white"
+        radius="1.5"
+        position="0 7.5 0.9"></a-sphere>
+
+      <!-- Mouth -->
+      <a-entity
+        position="0 7.5 3"
+        color="black"
+        rotation="0 0 110"
+        geometry="primitive: ring; thetaStart:100;thetaLength:120;radiusOuter: 0; radiusInner: 0.96;"
+        material="side:double;color:black;"
+      ></a-entity>
+
+      <!-- Body -->
+      <a-sphere
+        id="body"
+        color="#0276aa"
+        position="0 3.8 0"
+        radius="3"
+      >
+      </a-sphere>
+     <!-- Left Legs -->
+      <a-cylinder color="#0276aa" radius="0.9" height="3.5" position="-1 0.7 0">
+      </a-cylinder>
+
+      <a-entity
+        position="-1 -0.5 0.1"
+        rotation="0 0 0"
+        geometry="primitive: sphere; radius: 1.3; thetaStart:12;thetaLength:50;"
+        material="color:#ffffff"
+      ></a-entity>
+
+      <!-- Right Leg -->
+      <a-cylinder color="#0276aa" radius="0.9" height="3.5" position="1 0.7 0">
+      </a-cylinder>
+
+      <a-entity
+        position="1 -0.5 0.1"
+        rotation="0 0 0"
+        geometry="primitive: sphere; radius: 1.3; thetaStart:12;thetaLength:50;"
+        material="color:#ffffff"
+      ></a-entity>
+
+      <!--  --------- CAMERA --------- -->
+
+      <a-camera look-controls-enabled wasd-controls-enabled position="0 5 15">
+      </a-camera>
+    </a-scene>
+    <!-- Closing scene -->
+  </body>
+</html>
